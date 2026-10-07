@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkNavy"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingLeft="28dp"
+        android:paddingRight="28dp"
+        android:paddingTop="36dp"
+        android:paddingBottom="30dp">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_robot"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FOREX ROBOT"
+            android:textColor="@color/gold"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account — یو اکاونټ جوړ کړئ"
+            android:textColor="@color/textGray"
+            android:textSize="13sp"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- Sign Up Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_login_card"
+            android:orientation="vertical"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:paddingTop="22dp"
+            android:paddingBottom="22dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📝  New Account"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/etSignUpEmail"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Enter Email"
+                android:textColorHint="#506070"
+                android:textColor="@color/white"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="@drawable/bg_input"
+                android:textSize="15sp"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/etSignUpPassword"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Enter License Key"
+                android:textColorHint="#506070"
+                android:textColor="@color/white"
+                android:inputType="textPassword"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="@drawable/bg_input"
+                android:textSize="15sp"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/etSignUpConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Confirm License Key"
+                android:textColorHint="#506070"
+                android:textColor="@color/white"
+                android:inputType="textPassword"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="@drawable/bg_input"
+                android:textSize="15sp"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="SIGN UP"
+                android:textColor="@color/darkNavy"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:background="@drawable/btn_login"
+                android:letterSpacing="0.1"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvGoLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account لرئ؟  Login کړئ"
+            android:textColor="@color/gold"
+            android:textSize="13sp"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+</ScrollView>

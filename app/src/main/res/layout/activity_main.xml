@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/darkNavy">
+
+    <!-- ══════════ HEADER ══════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/headerBg"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:src="@drawable/ic_robot"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Robot"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FOREX ROBOT"
+                android:textColor="@color/gold"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Signal Bot  |  Amin Agha Hamidi"
+                android:textColor="@color/textGray"
+                android:textSize="10sp"
+                android:maxLines="1"/>
+        </LinearLayout>
+
+        <!-- Right side: Profile + LIVE -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvHeaderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/textGray"
+                android:textSize="10sp"
+                android:layout_marginEnd="4dp"
+                android:maxLines="1"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/ivHeaderPhoto"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_robot"
+                android:scaleType="centerCrop"
+                android:background="@drawable/bg_photo_circle"
+                android:layout_marginEnd="6dp"
+                android:visibility="gone"/>
+
+            <!-- Profile tap area -->
+            <TextView
+                android:id="@+id/btnProfile"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="👤"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- LIVE Badge -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_live_badge"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp">
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/ic_dot_live"
+                    android:layout_marginEnd="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LIVE"
+                    android:textColor="@color/liveGreen"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ══════════ SIGNAL CARDS ══════════ -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp">
+
+            <!-- ─── GOLD Card ─── -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardGold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cardBg"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                android:layout_marginBottom="12dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+                    <TextView
+                        android:id="@+id/tvSymbolGold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🥇  XAUUSD.m  —  GOLD vs USD"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView
+                        android:id="@+id/tvSignalGold"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:text="— LOADING"
+                        android:gravity="center"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:background="@drawable/bg_wait_signal"
+                        android:textColor="@color/textGray"
+                        android:layout_marginBottom="6dp"/>
+                    <TextView
+                        android:id="@+id/tvConfGold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/gold"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView
+                        android:id="@+id/tvCrossGold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🔔 Fresh Crossover Signal!"
+                        android:textColor="@color/crossoverYellow"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginBottom="8dp"
+                        android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/tvEntryGold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📍  Entry: —"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView
+                        android:id="@+id/tvSLGold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔴  Stop Loss: —"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView
+                        android:id="@+id/tvTPGold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🟢  Take Profit (Scalp): —"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="6dp"/>
+                    <TextView
+                        android:id="@+id/tvMacdGold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/textGray"
+                        android:textSize="11sp"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView
+                        android:id="@+id/tvSummaryGold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/buyGreen"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ─── JP225 Card ─── -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardJP225"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cardBg"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                android:layout_marginBottom="12dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+                    <TextView
+                        android:id="@+id/tvSymbolJP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🇯🇵  JP225.std  —  Japan 225 Index"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView
+                        android:id="@+id/tvSignalJP"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:text="— LOADING"
+                        android:gravity="center"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:background="@drawable/bg_wait_signal"
+                        android:textColor="@color/textGray"
+                        android:layout_marginBottom="6dp"/>
+                    <TextView
+                        android:id="@+id/tvConfJP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/gold"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView
+                        android:id="@+id/tvCrossJP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🔔 Fresh Crossover Signal!"
+                        android:textColor="@color/crossoverYellow"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginBottom="8dp"
+                        android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/tvEntryJP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📍  Entry: —"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView
+                        android:id="@+id/tvSLJP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔴  Stop Loss: —"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView
+                        android:id="@+id/tvTPJP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🟢  Take Profit (Scalp): —"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="6dp"/>
+                    <TextView
+                        android:id="@+id/tvMacdJP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/textGray"
+                        android:textSize="11sp"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView
+                        android:id="@+id/tvSummaryJP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/buyGreen"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ─── BTC Card ─── -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardBTC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cardBg"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                android:layout_marginBottom="12dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+                    <TextView
+                        android:id="@+id/tvSymbolBTC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₿  BTCUSD.m  —  Bitcoin vs USD"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView
+                        android:id="@+id/tvSignalBTC"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:text="— LOADING"
+                        android:gravity="center"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:background="@drawable/bg_wait_signal"
+                        android:textColor="@color/textGray"
+                        android:layout_marginBottom="6dp"/>
+                    <TextView
+                        android:id="@+id/tvConfBTC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/gold"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView
+                        android:id="@+id/tvCrossBTC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🔔 Fresh Crossover Signal!"
+                        android:textColor="@color/crossoverYellow"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginBottom="8dp"
+                        android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/tvEntryBTC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📍  Entry: —"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView
+                        android:id="@+id/tvSLBTC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔴  Stop Loss: —"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView
+                        android:id="@+id/tvTPBTC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🟢  Take Profit (Scalp): —"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="6dp"/>
+                    <TextView
+                        android:id="@+id/tvMacdBTC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/textGray"
+                        android:textSize="11sp"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView
+                        android:id="@+id/tvSummaryBTC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/buyGreen"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ══════════ BOTTOM BAR ══════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/headerBg"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/textGray"
+            android:textSize="11sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="6dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="🔄  Refresh Signals"
+            android:textColor="@color/darkNavy"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:background="@drawable/btn_refresh"/>
+
+    </LinearLayout>
+
+</LinearLayout>

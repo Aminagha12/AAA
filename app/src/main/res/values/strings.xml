@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Forex Robot</string>
+    <string name="login_title">FOREX ROBOT</string>
+    <string name="login_subtitle">Signal Bot</string>
+    <string name="secure_login">🔐 Secure Login</string>
+    <string name="password_hint">Enter Password</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="unauthorized">⚠️ Unauthorized access is prohibited</string>
+    <string name="home_title">FOREX ROBOT</string>
+    <string name="home_byline">Build Forex Robot Chart Analyzer By Amin Agha Hamidi in 24/09/2026</string>
+    <string name="home_subtitle">Signal Bot</string>
+    <string name="live_text">LIVE</string>
+    <string name="refresh">🔄  Refresh Signals</string>
+</resources>

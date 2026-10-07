@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="darkNavy">#0D1B2A</color>
+    <color name="headerBg">#0A1020</color>
+    <color name="cardBg">#112240</color>
+    <color name="gold">#FFD700</color>
+    <color name="subtitleRed">#FF4444</color>
+    <color name="buyGreen">#00C853</color>
+    <color name="sellRed">#FF1744</color>
+    <color name="waitGray">#607D8B</color>
+    <color name="white">#FFFFFF</color>
+    <color name="textGray">#90A4AE</color>
+    <color name="liveGreen">#4CAF50</color>
+    <color name="inputBg">#1A2D40</color>
+    <color name="borderColor">#2A4A6A</color>
+    <color name="crossoverYellow">#FFEB3B</color>
+</resources>

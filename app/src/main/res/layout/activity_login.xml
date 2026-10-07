@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkNavy"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingLeft="28dp"
+        android:paddingRight="28dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="30dp">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/ic_robot"
+            android:layout_marginBottom="18dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FOREX ROBOT"
+            android:textColor="@color/gold"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Signal Bot"
+            android:textColor="@color/textGray"
+            android:textSize="15sp"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Login Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_login_card"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp">
+
+            <!-- Changed: Secure Login → License Key -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔑  License Key"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Email field -->
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Enter Email"
+                android:textColorHint="#506070"
+                android:textColor="@color/white"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="@drawable/bg_input"
+                android:textSize="15sp"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Password field with eye toggle -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Enter License Key"
+                    android:textColorHint="#506070"
+                    android:textColor="@color/white"
+                    android:inputType="textPassword"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="52dp"
+                    android:background="@drawable/bg_input"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:id="@+id/ivEye"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="6dp"
+                    android:src="@android:drawable/ic_menu_view"
+                    android:alpha="0.5"
+                    android:padding="10dp"/>
+
+            </FrameLayout>
+
+            <!-- Changed: LOGIN → OK -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="OK"
+                android:textColor="@color/darkNavy"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:background="@drawable/btn_login"
+                android:letterSpacing="0.12"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvGoSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account نه لرئ؟  Sign Up کړئ"
+            android:textColor="@color/gold"
+            android:textSize="13sp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚠️  Unauthorized access is prohibited"
+            android:textColor="@color/textGray"
+            android:textSize="11sp"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+</ScrollView>

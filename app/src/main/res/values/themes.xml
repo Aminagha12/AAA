@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.ForexRobot" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/gold</item>
+        <item name="colorPrimaryDark">@color/headerBg</item>
+        <item name="colorAccent">@color/buyGreen</item>
+        <item name="android:windowBackground">@color/darkNavy</item>
+        <item name="android:statusBarColor">@color/headerBg</item>
+        <item name="android:navigationBarColor">@color/headerBg</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+</resources>
